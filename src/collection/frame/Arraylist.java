@@ -24,6 +24,12 @@ public class Arraylist {
 			System.out.println(numbers.get(i));
 		}
 		
+		//removes from first index *slower way*
+		numbers.remove(0);
+		
+		//removes from last 
+		numbers.remove(numbers.size()-1);
+		
 		System.out.println("\n Iteration 2:");
 		
 		for(Integer value:numbers)
@@ -31,7 +37,7 @@ public class Arraylist {
 			System.out.println(value);
 		}
 		 
-		
+		// *List Interface
 		List<String> name=new ArrayList<String>();
 
 	}
