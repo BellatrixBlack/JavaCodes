@@ -5,12 +5,12 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 //***** There can't be two public classes in one java file****//
- class Person
+ class Persona
 {
 	 public int id;
 	 public String name;
 	 
-	 public Person(int id,String name)
+	 public Persona(int id,String name)
 	 {
 		 this.id=id;
 		 this.name=name;
@@ -56,29 +56,30 @@ public class CustomizedObjects {
 
 	public static void main(String[] args) {
 		
-		Person p= new Person(0,"Anik");
-		Person p1= new Person(2,"Disha");
-		Person p2= new Person(1,"Tasnuva");
-		Person p3= new Person(2,"Disha");
+		Persona p= new Persona(0,"Anik");
+		Persona p1= new Persona(2,"Disha");
+		Persona p2= new Persona(1,"Tasnuva");
+		Persona p3= new Persona(2,"Disha");
 		//****Sets and Maps don't repeat duplicate value*********//
-		LinkedHashMap<Person,Integer>map=new LinkedHashMap<Person,Integer>();
+		LinkedHashMap<Persona,Integer>map=new LinkedHashMap<Persona,Integer>();
 		
 		map.put(p, 3);
 		map.put(p1, 2);
 		map.put(p2,1);
-		map.put(p3, 3);
+		map.put(p3,4);
 		
-		for(Person key: map.keySet())
+		for(Persona key: map.keySet())
 		{
 			System.out.println(key +" : "+map.get(key));
 		}
 		
-		Set<Person> set1=new LinkedHashSet<Person>();
+		Set<Persona> set1=new LinkedHashSet<Persona>();
 		
 		set1.add(p);
 		set1.add(p1);
 		set1.add(p2);
 		set1.add(p3);
+		
 		
 		System.out.println(set1);
 	}
